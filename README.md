@@ -30,7 +30,7 @@ The code renders to a webpage for generating a random password based on the requ
 
 The following image shows the web application's appearance and functionality:
 
-![The Password Generator webpage includes a Generate Password button, a text box where the generated password is displayed, and clicking on the "Generate password" button opens a series of windows pop up asking for user's preferences for password.](03-javascript-homework-demo.png03-javascript-homework-demo.png)
+![The Password Generator webpage includes a Generate Password button, a text box where the generated password is displayed, and clicking on the "Generate password" button opens a series of windows pop up asking for user's preferences for password.] (../03-javascript-homework-demo.png03-javascript-homework-demo.png)
 
 
 ## Credits

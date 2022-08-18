@@ -4,6 +4,8 @@ var generateBtn = document.querySelector("#generate");
 
 //Homework Code starts here :
 //creating arrays of the characters to be included in the password to be generated.
+//variable in the function declared here.
+var arrIndex;
 
 var NumericCharacterArray =['0','1','2','3','4','5','6','7','8','9'];
 var UpperCaseAlphaArray = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','X','Y','Z'];
@@ -14,27 +16,29 @@ function generatePassword() {
 
 
  var passwordLength= window.prompt("How many characters would you like your password to contain?");
- UserPasswordLength = parseInt(passwordLength);
+ UserPasswordLength = parseInt(passwordLength);//changing string input to int.
+// validating input
  if ((UserPasswordLength >= 8 && UserPasswordLength <= 128))
   {
 
     // window prompts and alerts
-      var specialChar = window.confirm("Click OK to confirm including special characters");
+      var specialChar = window.confirm("Click OK to confirm including special characters\n (Don't use spaces or backslash)");
       var NumChar= window.confirm("Click OK to confirm including Numeric characters");
       var lcaseAlphabet= window.confirm("Click OK to confirm including lowercase characters");
       var uCaseAlphabet = window.confirm("Click OK to confirm including uppercase characters");
       var userChoicePassword =[];
 
+    //code to confirm at least one of the character type is chosen
             if(!specialChar && !NumChar && !lcaseAlphabet && !uCaseAlphabet )
             {
-              console.log("Nothing selected");
+             
               window.alert("You need to include at least one of the character types");
-              return;
+              return ;
 
             }
             else
             {
-
+                //creating array for all the character types included by the user
                if(specialChar)
                   {
                       userChoicePassword = userChoicePassword.concat(SpecialCharactersArray);
@@ -55,7 +59,8 @@ function generatePassword() {
                     userChoicePassword = userChoicePassword.concat(UpperCaseAlphaArray);
                     
                   }
-            }
+                  console.log(userChoicePassword);
+                }
     }
 
   else {
@@ -63,8 +68,19 @@ function generatePassword() {
     return;
   }
 
+ // Initializing it to be an empty string
 
-console.log(userChoicePassword);
+  var passwordGenarated='';
+  
+//generating randow index number and then concatenating password with random characters.
+  for(var i = 0; i < UserPasswordLength; ++i){
+
+    arrIndex = Math.floor(Math.random() * userChoicePassword.length);
+     passwordGenarated = passwordGenarated + userChoicePassword[arrIndex];
+    
+  }
+  console.log(passwordGenarated);
+  return passwordGenarated;
 
 }
 
@@ -72,7 +88,7 @@ console.log(userChoicePassword);
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+ console.log(password);
   passwordText.value = password;
 
 }

@@ -30,7 +30,7 @@ The code renders to a webpage for generating a random password based on the requ
 
 The following image shows the web application's appearance and functionality:
 
-![The Password Generator webpage includes a Generate Password button, a text box where the generated password is displayed, and clicking on the "Generate password" button opens a series of windows pop up asking for user's preferences for password.] ![alt text](../PasswordGenerator-Week3/03-javascript-homework-demo.png03-javascript-homework-demo.png)
+![The Password Generator webpage includes a Generate Password button, a text box where the generated password is displayed, and clicking on the "Generate password" button opens a series of windows pop up asking for user's preferences for password.] ![alt text](../03-javascript-homework-demo.png03-javascript-homework-demo.png)
 
 
 ## Credits
@@ -56,4 +56,4 @@ https://github.com/Vidhi0307/PasswordGenerator-Week3
 
 All the Files are in the main branch(root)
 
-WEBSITE LINK : 
+WEBSITE LINK :  https://vidhi0307.github.io/PasswordGenerator-Week3/
